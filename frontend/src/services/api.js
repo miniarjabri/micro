@@ -1,20 +1,10 @@
-import axios from "axios";
+const API_URL = "http://localhost:5000";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-
-
-export const loginWithGithub = async () => {
-  window.location.href = `${API_URL}/auth/github`;
+export const fetchTodos = async () => {
+    const res = await fetch(`${API_URL}/list`, { credentials: "include" });
+    return res.json();
 };
 
-export const fetchTasks = async (token) => {
-  return axios.get(`${API_URL}/tasks`, {
-    headers: { Authorization: `Bearer ${token}` }
-  });
-};
-
-export const addTask = async (task, token) => {
-  return axios.post(`${API_URL}/tasks`, { text: task }, {
-    headers: { Authorization: `Bearer ${token}` }
-  });
+export const loginWithGoogle = () => {
+    window.location.href = `${API_URL}/auth/google`;
 };
