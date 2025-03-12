@@ -9,13 +9,27 @@
     "test": "react-scripts test"
   },
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "axios": "^1.6.0",
-    "bootstrap": "^5.3.0"
+    "axios": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "^7.3.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
