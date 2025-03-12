@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGO_URI);
 
 const Task = mongoose.model("Task", { userId: String, text: String });
 
@@ -34,4 +34,4 @@ app.get("/tasks", verifyToken, async (req, res) => {
     res.json(tasks);
 });
 
-app.listen(5000, () => console.log("Tasks service running on port 5000"));
+app.listen(5001, () => console.log("Tasks service running on port 5001"));
